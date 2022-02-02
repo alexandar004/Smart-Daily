@@ -16,5 +16,5 @@
         app:menu="@menu/toolbar"
         app:title="Daily Smarts"
         app:titleTextColor="@color/white" />
-    
+
 </androidx.constraintlayout.widget.ConstraintLayout>
