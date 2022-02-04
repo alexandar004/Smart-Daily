@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">DailySmarts</string>
     <string name="refresh">Refresh</string>
+    <string name="daily_quote">Daily Quote</string>
+    <string name="my_quotes">My Quotes</string>
+
 </resources>
