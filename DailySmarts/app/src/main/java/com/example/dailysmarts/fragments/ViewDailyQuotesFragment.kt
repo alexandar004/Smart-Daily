@@ -47,7 +47,8 @@ class ViewDailyQuotesFragment : Fragment() {
 //        }
         quoteViewModel.getQuote(enLang) // Взимаш въпроса
         quoteViewModel.quoteData.observe(viewLifecycleOwner) { quote -> // Обхождаш livedata-та;  quote.quoteAuthor
-            //            refreshSwipe.isRefreshing = false
+
+            binding.refreshSwipe.isRefreshing = false
             quoteText.text = quote.quoteText
             val currentQuote = Quote(quoteText = quote.quoteText,
                 quoteAuthor = quote.quoteAuthor,
