@@ -3,5 +3,13 @@
     <string name="refresh">Refresh</string>
     <string name="daily_quote">Daily Quote</string>
     <string name="my_quotes">My Quotes</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <dimen name="size450">450sp</dimen>
+    <dimen name="size48">48sp</dimen>
+    <dimen name="size12">12dp</dimen>
+    <dimen name="size14">14dp</dimen>
+    <dimen name="size24">24sp</dimen>
 
 </resources>
