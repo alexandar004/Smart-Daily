@@ -1,0 +1,26 @@
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.exe
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.deps.json
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.runtimeconfig.json
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.runtimeconfig.dev.json
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.dll
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.pdb
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.csproj.AssemblyReference.cache
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.AssemblyInfoInputs.cache
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.AssemblyInfo.cs
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.csproj.CoreCompileInputs.cache
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.dll
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.pdb
+C:\Users\Gabriel\Desktop\SPAM SPAM\school shit\Bojkata\zadacha 7 definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.genruntimeconfig.cache
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.exe
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.deps.json
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.runtimeconfig.json
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.runtimeconfig.dev.json
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.dll
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\bin\Debug\netcoreapp3.1\definirane_klasove_obekti.pdb
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.csproj.AssemblyReference.cache
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.AssemblyInfoInputs.cache
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.AssemblyInfo.cs
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.csproj.CoreCompileInputs.cache
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.dll
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.pdb
+C:\Users\User\AndroidStudioProjects\Definirane na klasove i obekti\definirane_klasove_obekti\definirane_klasove_obekti\obj\Debug\netcoreapp3.1\definirane_klasove_obekti.genruntimeconfig.cache
