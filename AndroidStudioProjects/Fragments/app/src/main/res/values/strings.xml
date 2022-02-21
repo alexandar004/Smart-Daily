@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Fragments</string>
-    <string name="profile">profile</string>
-    <string name="team">team</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="team_name">team name</string>
-    <string name="change_team_name">change_team_name</string>
-</resources>
