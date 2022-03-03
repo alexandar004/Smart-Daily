@@ -6,14 +6,14 @@ import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.dailysmarts.dataBase.DataBaseQuote
+import com.example.dailysmarts.api.Quote
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class MyQuotesViewModel(application: Application) : AndroidViewModel(application) {
 
-    private val _quotesData = MutableLiveData<List<DataBaseQuote>>()
-    var quotesData: LiveData<List<DataBaseQuote>> = _quotesData
+    private val _quotesData = MutableLiveData<List<Quote>>()
+    var quotesData: LiveData<List<Quote>> = _quotesData
     private lateinit var quoteService: QuoteService
 
 
@@ -32,7 +32,7 @@ class MyQuotesViewModel(application: Application) : AndroidViewModel(application
         }
     }
 
-    fun deleteQuote(quote: DataBaseQuote) {
+    fun deleteQuote(quote: Quote) {
         viewModelScope.launch(Dispatchers.IO) {
             quoteService.deleteQuote(quote)
         }

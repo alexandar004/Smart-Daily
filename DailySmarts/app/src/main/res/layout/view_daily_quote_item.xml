@@ -33,14 +33,15 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintRight_toRightOf="parent" />
 
-        <ImageButton
-            android:id="@+id/btnHeart"
+        <ImageView
+            android:id="@+id/btnSave"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/size12"
             android:src="@drawable/ic_baseline_favorite_border_24"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent" />
+
 
         <ImageButton
             android:id="@+id/btnShare"
@@ -49,7 +50,7 @@
             android:layout_marginStart="@dimen/size12"
             android:src="@drawable/ic_baseline_share_24"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toRightOf="@+id/btnHeart" />
+            app:layout_constraintLeft_toRightOf="@+id/btnSave" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

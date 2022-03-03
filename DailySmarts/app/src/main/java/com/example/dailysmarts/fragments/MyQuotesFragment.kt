@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.example.dailysmarts.adapters.MyQuotesAdapter
-import com.example.dailysmarts.dataBase.DataBaseQuote
+import com.example.dailysmarts.api.Quote
 import com.example.dailysmarts.databinding.FragmentMyQuotesBinding
 import com.example.dailysmarts.viewModels.MyQuotesViewModel
 import kotlinx.android.synthetic.main.view_daily_quote_item.*
@@ -24,10 +24,11 @@ class MyQuotesFragment : Fragment() {
         ViewModelProvider(this)[MyQuotesViewModel::class.java]
     }
 
-    //private lateinit var quoteService: QuoteService
     private lateinit var recyclerView: RecyclerView
     private lateinit var refreshMyQuote: SwipeRefreshLayout
     private lateinit var binding: FragmentMyQuotesBinding
+    private var adapter = MyQuotesAdapter()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -36,35 +37,26 @@ class MyQuotesFragment : Fragment() {
 
         binding = FragmentMyQuotesBinding.inflate(inflater, container, false)
 
-        loadMovie()
-
-        refreshMyQuote = binding.refreshMyQuotes
-
-        setRecyclerView()
-
-        refreshMyQuote.setOnRefreshListener {
-            myQuotesViewModel.onLoadQuote()
-            myQuotesViewModel.quotesData.observe(viewLifecycleOwner) {
-                val adapter = MyQuotesAdapter(it)
-                recyclerView.adapter = adapter
-                refreshMyQuote.isRefreshing = false
-            }
-        }
 
         return binding.root
     }
 
-    private fun deletedQuoteListener(quote: DataBaseQuote) {
-        btnHeart.setOnClickListener {
-            viewLifecycleOwner.lifecycleScope.launch(Dispatchers.IO) {
-                myQuotesViewModel.deleteQuote(quote)
-            }
-        }
-    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
-    private fun loadMovie() {
-        viewLifecycleOwner.lifecycleScope.launch(Dispatchers.IO) {
+        setRecyclerView()
+        refreshMyQuote = binding.refreshMyQuotes
+
+
+        refreshMyQuote.setOnRefreshListener {
             myQuotesViewModel.onLoadQuote()
+            myQuotesViewModel.quotesData.observe(viewLifecycleOwner) {
+
+                recyclerView.adapter = adapter
+                refreshMyQuote.isRefreshing = false
+
+                adapter.setItems(it)
+            }
         }
     }
 
@@ -72,12 +64,13 @@ class MyQuotesFragment : Fragment() {
         recyclerView = binding.recycleViewMyQuotes
         recyclerView.layoutManager = LinearLayoutManager(this.context)
     }
+
+
+    private fun deletedQuoteListener(quote: Quote) {
+        btnSave.setOnClickListener {
+            viewLifecycleOwner.lifecycleScope.launch(Dispatchers.IO) {
+                myQuotesViewModel.deleteQuote(quote)
+            }
+        }
+    }
 }
-
-
-//        btnHeart.setOnClickListener{deletedQuoteListener()}
-
-//        myQuotesViewModel.quotesData.observe(viewLifecycleOwner) { quotes -> // Работа с дата-та
-//
-//            adapter.setItems(quotes)
-//        }

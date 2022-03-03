@@ -5,8 +5,9 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.dailysmarts.Constant.Companion.DATABASE_NAME
+import com.example.dailysmarts.api.Quote
 
-@Database(entities = [DataBaseQuote::class], version = 2)
+@Database(entities = [Quote::class], version = 3)
 abstract class AppDatabase : RoomDatabase() {
 
     companion object {

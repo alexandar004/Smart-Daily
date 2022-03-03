@@ -5,7 +5,6 @@ import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.dailysmarts.api.Quote
-import com.example.dailysmarts.dataBase.DataBaseQuote
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
@@ -21,7 +20,7 @@ class ViewDailyQuotesViewModel(application: Application) : AndroidViewModel(appl
         quoteService = QuoteService(getApplication())
     }
 
-    fun insertQuote(quote: DataBaseQuote) {
+    fun insertQuote(quote: Quote) {
         viewModelScope.launch(Dispatchers.IO) {
             quoteService.addQuote(quote)
         }

@@ -1,25 +1,20 @@
 package com.example.dailysmarts.adapters
 
-import android.provider.ContactsContract
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dailysmarts.R
 import com.example.dailysmarts.api.Quote
-import com.example.dailysmarts.dataBase.DataBaseQuote
 import kotlinx.android.synthetic.main.view_daily_quote_item.view.*
 
-class MyQuotesAdapter(private val savedQuote: List<DataBaseQuote>) :
+class MyQuotesAdapter() :
     RecyclerView.Adapter<MyQuotesAdapter.ViewHolder>() {
 
-    //private val quoteResponse: Quote
-    //RecyclerView.Adapter<QuoteAdapter.ViewHolder>()
-    //private val quoteList: MutableList<DataBaseQuote> = mutableListOf()
-
+    private val listQuote: MutableList<Quote> = mutableListOf()
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        fun bind(quote: DataBaseQuote) {
+        fun bind(quote: Quote) {
             itemView.txtQuote.text = quote.quoteText
             itemView.authorName.text = quote.quoteAuthor
 
@@ -34,16 +29,15 @@ class MyQuotesAdapter(private val savedQuote: List<DataBaseQuote>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(savedQuote[position])
+        holder.bind(listQuote[position])
     }
 
-//    fun setItems(quotes: List<DataBaseQuote>) {
-//        quoteList.clear()
-//        quoteList.addAll(quotes)
-//        notifyDataSetChanged()
-//    }
+    fun setItems(quotes: List<Quote>) {
+        listQuote.clear()
+        listQuote.addAll(quotes)
+        notifyDataSetChanged()
+    }
 
-    override fun getItemCount(): Int = savedQuote.size
-
+    override fun getItemCount(): Int = listQuote.size
 }
 

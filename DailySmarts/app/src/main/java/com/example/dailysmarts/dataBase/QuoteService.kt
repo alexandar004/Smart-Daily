@@ -1,7 +1,6 @@
 import android.content.Context
 import com.example.dailysmarts.api.Quote
 import com.example.dailysmarts.dataBase.AppDatabase
-import com.example.dailysmarts.dataBase.DataBaseQuote
 import com.example.dailysmarts.dataBase.QuoteDao
 
 class QuoteService(context: Context) {
@@ -19,15 +18,15 @@ class QuoteService(context: Context) {
         }
     }
 
-    suspend fun getAllQuotes(): List<DataBaseQuote> {
+    suspend fun getAllQuotes(): List<Quote> {
         return quoteDao.getAllQuotes()
     }
 
-    suspend fun addQuote(quote: DataBaseQuote) {
+    suspend fun addQuote(quote: Quote) {
         quoteDao.insertQuote(quote)
     }
 
-    suspend fun deleteQuote(quote: DataBaseQuote) {
+    suspend fun deleteQuote(quote: Quote) {
         quoteDao.deleteQuote(quote)
     }
 }

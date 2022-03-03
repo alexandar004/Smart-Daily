@@ -7,11 +7,11 @@ import com.example.dailysmarts.api.Quote
 interface QuoteDao {
 
     @Query("SELECT * FROM quote_table")
-    suspend fun getAllQuotes(): List<DataBaseQuote>
+    suspend fun getAllQuotes(): List<Quote>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertQuote(quote: DataBaseQuote)
+    suspend fun insertQuote(quote: Quote)
 
     @Delete
-    suspend fun deleteQuote(quote: DataBaseQuote)
+    suspend fun deleteQuote(quote: Quote)
 }
