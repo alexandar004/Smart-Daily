@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
         tabLayout = binding.tabLayout
         pager = binding.pager
 
-        tabLayout.addTab(tabLayout.newTab().setText("My Quotes"))
         tabLayout.addTab(tabLayout.newTab().setText("Daily Quotes"))
+        tabLayout.addTab(tabLayout.newTab().setText("My Quotes"))
         tabLayout.tabGravity = TabLayout.GRAVITY_FILL
 
         val pagerAdapter = FragmentsAdapter(this, supportFragmentManager, tabLayout.tabCount)

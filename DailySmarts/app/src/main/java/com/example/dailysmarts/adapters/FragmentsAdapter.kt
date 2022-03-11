@@ -13,10 +13,10 @@ class FragmentsAdapter(var context: Context, fragmentManager: FragmentManager, v
     override fun getItem(position: Int): Fragment {
         return when (position) {
             0 -> {
-                MyQuotesFragment()
+                ViewDailyQuotesFragment()
             }
             1 -> {
-                ViewDailyQuotesFragment()
+                MyQuotesFragment()
             }
             else -> getItem(position)
         }

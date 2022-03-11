@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.dailysmarts.adapters.DailyQuoteAdapter
+import com.example.dailysmarts.adapters.ItemListener
 import com.example.dailysmarts.api.Quote
 import com.example.dailysmarts.databinding.FragmentViewDailyQuotesBinding
 import com.example.dailysmarts.databinding.ViewDailyQuoteItemBinding
@@ -18,7 +19,7 @@ import com.example.dailysmarts.viewModels.QuoteViewModel
 import com.example.dailysmarts.viewModels.ViewDailyQuotesViewModel
 import kotlinx.android.synthetic.main.view_daily_quote_item.*
 
-class ViewDailyQuotesFragment : Fragment() {
+class ViewDailyQuotesFragment : Fragment(), ItemListener {
 
     private val viewDailyQuoteViewModel by lazy {
         ViewModelProvider(this)[ViewDailyQuotesViewModel::class.java]
@@ -107,7 +108,7 @@ class ViewDailyQuotesFragment : Fragment() {
                 quoteLink = quote.quoteLink
             )
 
-            adapter = DailyQuoteAdapter(currentQuote)
+            adapter = DailyQuoteAdapter(currentQuote, this)
             recyclerView.adapter = adapter
 
         }
@@ -122,6 +123,10 @@ class ViewDailyQuotesFragment : Fragment() {
         bindingFragmentViewDailyQuotes.refreshSwipe.setOnRefreshListener {
             fetchQuote()
         }
+    }
+
+    override fun onSavedQuote(item: Quote) {
+        viewDailyQuoteViewModel.insertQuote(item)
     }
 
 //    private fun clickBtnHeartListener() {

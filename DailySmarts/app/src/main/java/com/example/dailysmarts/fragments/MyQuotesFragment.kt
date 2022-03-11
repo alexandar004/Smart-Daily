@@ -1,8 +1,8 @@
 package com.example.dailysmarts.fragments
 
-import android.opengl.Visibility
 import android.os.Bundle
 import android.view.LayoutInflater
+
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
@@ -11,6 +11,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+import com.example.dailysmarts.adapters.DeleteItemListener
 import com.example.dailysmarts.adapters.MyQuotesAdapter
 import com.example.dailysmarts.api.Quote
 import com.example.dailysmarts.databinding.FragmentMyQuotesBinding
@@ -19,7 +20,7 @@ import kotlinx.android.synthetic.main.view_daily_quote_item.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-class MyQuotesFragment : Fragment() {
+class MyQuotesFragment : Fragment(), DeleteItemListener {
 
     private val myQuotesViewModel by lazy {
         ViewModelProvider(this)[MyQuotesViewModel::class.java]
@@ -28,7 +29,9 @@ class MyQuotesFragment : Fragment() {
     private lateinit var recyclerView: RecyclerView
     private lateinit var refreshMyQuote: SwipeRefreshLayout
     private lateinit var binding: FragmentMyQuotesBinding
-    private var adapter = MyQuotesAdapter()
+    private lateinit var deleteItem: DeleteItemListener
+//    private var adapter = MyQuotesAdapter(deleteItem)
+    private lateinit var adapter: MyQuotesAdapter
 
 
     override fun onCreateView(
@@ -52,6 +55,8 @@ class MyQuotesFragment : Fragment() {
             myQuotesViewModel.onLoadQuote()
             myQuotesViewModel.quotesData.observe(viewLifecycleOwner) {
 
+//                val adapter = MyQuotesAdapter(deleteItem)
+                adapter = MyQuotesAdapter(this)
                 recyclerView.adapter = adapter
 
                 adapter.setItems(it)
@@ -72,5 +77,9 @@ class MyQuotesFragment : Fragment() {
                 myQuotesViewModel.deleteQuote(quote)
             }
         }
+    }
+
+    override fun onDeleteQuote(item: Quote) {
+        myQuotesViewModel.deleteQuote(item)
     }
 }
