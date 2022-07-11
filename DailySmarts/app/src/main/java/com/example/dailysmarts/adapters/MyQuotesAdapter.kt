@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.dailysmarts.R
 import com.example.dailysmarts.api.Quote
 import com.example.dailysmarts.databinding.ViewDailyQuoteItemBinding
 import kotlinx.android.synthetic.main.view_daily_quote_item.view.*
@@ -21,8 +22,6 @@ class MyQuotesAdapter(private val deleteListener: DeleteItemListener) :
         fun bind(quote: Quote) {
             itemView.txtQuote.text = quote.quoteText
             itemView.authorName.text = quote.quoteAuthor
-
-
             binding.btnSave.setOnClickListener {
                 deleteItem.onDeleteQuote(quote)
             }
